@@ -8,7 +8,7 @@ You can post drafts to the `/drafts` directory. This will allow you to privately
 
 ### Images
 
-You can store images anywhere in your repo and refer to them in your articles with relative paths. For instance, if you had `example.gif` the `/images` directory, then you could refer to it like this:
+You can store images anywhere in your repo and refer to them in your articles with relative paths. For instance, if you had `example.gif` in the `/images` directory, then you could refer to it like this:
 
 ```
 ![example](/images/example.gif)
