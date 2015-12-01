@@ -2,6 +2,18 @@
 
 To post on [jargon](http://jargon.io), just fork this repo and check your Markdown-formatted articles into the `/articles` directory. We'll automatically detect and publish your content at [jargon.io/yourgithubusername](http://jargon.io/yourgithubusername).
 
+### Drafts
+
+You can post drafts to the `/drafts` directory. This will allow you to privately preview your posts before you publish them. To publish them, simply move them to the `/articles` directory in your repo.
+
+### Images
+
+You can store images anywhere in your repo and refer to them in your articles with relative paths. For instance, if you had `example.gif` the `/images` directory, then you could refer to it like this:
+
+```
+![example](/images/example.gif)
+```
+
 ### Extended Markdown
 
 Jargon supports an extended version of [GitHub-flavored Markdown](https://help.github.com/articles/github-flavored-markdown/). In addition to normal fenced code blocks, you can also reference code files stored in your `/snippets` directory.
