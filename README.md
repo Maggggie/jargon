@@ -1,6 +1,7 @@
 ## Jargon
+[Jargon](http://jargon.io) is a publishing platform for people who write about code.
 
-To post on [Jargon](http://jargon.io), just fork this repo and check your Markdown-formatted articles into the `/articles` directory. We'll automatically detect and publish your content at [jargon.io/yourgithubusername](http://jargon.io/yourgithubusername).
+To post on Jargon, just fork this repo and check your Markdown-formatted articles into the `/articles` directory. We'll automatically detect and publish your content at [jargon.io/yourgithubusername](http://jargon.io/yourgithubusername).
 
 ### Drafts
 
