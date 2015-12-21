@@ -1,6 +1,6 @@
 This is a test:
 
-<img src="https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png"/>
+![]: https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png
 <img src="https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/2.png"/>
 <img src="https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.png"/>
 <img src="https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png"/>
