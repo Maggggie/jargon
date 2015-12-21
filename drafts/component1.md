@@ -2,7 +2,8 @@ This is a test:
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/2.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.1.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.2.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/5.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/6.png)
