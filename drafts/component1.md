@@ -1,4 +1,4 @@
-# This Is An Example Title
+# Exposing Visualforce in a Lightning Component
 
 This article is intended as an aid in building your first Salesforce Lightning Component. In this post, we will cover duplicating
 an existing Visualforce Page as a Lightning Component. Specifically, we will create a Chatter feed component to use in a Napili template.
