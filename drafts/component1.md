@@ -1,7 +1,9 @@
-This article is intended as an aid in building your first Salesforce Lightning Component. In this post, we will cover duplicating
-an existing Visualforce Page, as a Lightning Component. Specifically, we will create a Chatter feed component for use in a Napili template.
+# This Is An Example Title
 
-To complete this tutorial, you will need a developer/demo org ready, to allow you to follow along.
+This article is intended as an aid in building your first Salesforce Lightning Component. In this post, we will cover duplicating
+an existing Visualforce Page as a Lightning Component. Specifically, we will create a Chatter feed component to use in a Napili template.
+
+To complete this tutorial, you'll need a developer/demo org ready, to allow you to follow along.
 
 ### 1. Create the Visualforce Page:
 
@@ -79,7 +81,7 @@ Now that we're in the Community Builder, let's add our Chatter component to the 
 Let's return to the Developer Console, and add these style attributes to our iFrame:
 
 ```html
-    <iframe src="https://gs0.salesforce.com/apex/lightningChatter" width="100%" height="1000px;" frameBorder="0"/>
+<iframe src="https://gs0.salesforce.com/apex/lightningChatter" width="100%" height="1000px;" frameBorder="0"/>
 ````
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/15.png)
