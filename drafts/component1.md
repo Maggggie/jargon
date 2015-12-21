@@ -1,4 +1,5 @@
-This is a test:
+This article is intended as an aid in building your first Salesforce Lightning Component. In this post, we will cover duplicating
+an existing Visualforce Page, as a Lightning Component.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/2.png)
