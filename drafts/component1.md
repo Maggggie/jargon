@@ -23,14 +23,31 @@ Name the file, "lightningChatter"...
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.1.png)
 
-Now, navigate to https://[yourdomainroothere].salesforce.com/apex/lightningChatter, and you should see your Chatter feed appear like so:
+Now, navigate to https://[yourdomainroot].salesforce.com/apex/lightningChatter, and you should see your Chatter feed appear like so:
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.2.png)
 
+### Step Two:
+
+Now we're ready to create our new Lightning Component. Name your new component "lightningChatter" as well:
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png)
+
+Add an iFrame to the Lightning Component, that references the Visualforce Page we created:
+
+```html
+<aura:component>
+    <iframe src="https://[yourdomainroot].salesforce.com/apex/lightningChatter"/>
+</aura:component>
+```
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/5.png)
+
+We also need to add the 'implements="forceCommunity:availableForAllPageTypes"' property to the Lightning Componenet, to allow it to be added to our community:
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/6.png)
+
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/7.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/8.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/9.png)
