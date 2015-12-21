@@ -9,7 +9,7 @@ Open up the developer console by clicking on the gear in the upper right hand co
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png)
 
-Name the page "Lightning Chatter"...
+Name the file, "lightningChatter"...
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/2.png)
 
@@ -22,7 +22,12 @@ Name the page "Lightning Chatter"...
 ```
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.1.png)
+
+Now, navigate to https://[yourdomainroothere].salesforce.com/apex/lightningChatter, and you should see your Chatter feed appear like so:
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.2.png)
+
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/5.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/6.png)
