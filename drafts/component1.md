@@ -9,7 +9,11 @@ Open up the developer console by clicking on the gear in the upper right hand co
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png)
 
-Name the page "Lightning Chatter", and add the following code to page:
+Name the page "Lightning Chatter"...
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/2.png)
+
+... and add the following code to page:
 
 ```html
 <apex:page >
@@ -17,7 +21,6 @@ Name the page "Lightning Chatter", and add the following code to page:
 </apex:page>
 ```
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/2.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.1.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.2.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png)
