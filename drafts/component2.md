@@ -65,19 +65,17 @@ Make sure to Activate the page...
 ...and check "Active" on the next screen to add the component to the correct page layout.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/11.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/12.png)
 
 Now if you refresh your Opportunity, you should see our Lightning Component added to the page.
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/12.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/13.png)
 
 ### 3. Create Component to Change Commission Output
 
 So we've created a Lightning Component, and added it to our layout, but it doesn't do anything except display a static commission amount. Let's create a slider that allows the salesperson to adjust the total price, which we'll use to update the total commission.
 
 First, create a new Lightning Component, and name it "commissionSlider."
-
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/13.png)
-
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/14.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/15.png)
