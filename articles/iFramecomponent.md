@@ -17,12 +17,12 @@ Name the file, "lightningChatter"...
 ... and add the following code to page:
 
 ```html
-<apex:page >
+<apex:page showHeader="false" sidebar="false">
     <chatter:newsfeed />
 </apex:page>
 ```
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.1.png)
+![alt text](http://i.imgur.com/AwmAcGp.jpg)
 
 Next, navigate to https://[yourdomainroot].salesforce.com/apex/lightningChatter, and you should see your Chatter feed appear like so:
 
