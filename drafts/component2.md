@@ -1,13 +1,30 @@
 # Building an Event Driven Lightning Component
 
-In this post, we will cover duplicating an existing Visualforce Page as a Lightning Component. Specifically, we will create a Chatter feed component to use in a Napili template.
+In this post, we will create an event driven commission calculator, and add it to our Opportunity layout.
 
 To complete this tutorial, you'll need a developer/demo org to help you follow along.
 
+### 1. Create a Domain:
+
+Salesforce requires that an app must have it's own domain, to be able to add a Lightning Component to a record layout. So let's start by adding a domain to our org.
+
+First, go to setup, and search for "Domain" in the search bar. Then select "My Domain".
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/1.png)
+
+Next, add a unique domain name, and click "Check Availability." If the domain is available, click "Register Domain", otherwise try a different domain name.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/2.png)
+
+Now we need to log in using our new domain name. Navigate to http://[yourdomainname].salesforce.com, and log in using your org credentials.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/3.png)
+
+Last, go back to "My Domains" in setup, and click "Deploy to Users" to activate your new domain.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/4.png)
+
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/5.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.0.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.1.png)
