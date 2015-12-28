@@ -32,8 +32,6 @@ Open up the developer console by clicking on the gear in the upper right hand co
 
 This component will simply display the total commission the salesperson will earn for closing the Opporunity. Other Lightning Components will drive the inputs that change this value.
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.1.png)
-
 Add the following code to your new Lightning Component:
 
 ```html
@@ -41,12 +39,14 @@ Add the following code to your new Lightning Component:
 	<div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div>
 </aura:component>
 ```
-There are two pieces worth mentioning in this code block. First, ``` implements="flexipage:availableForAllPageTypes" ```, allows us to place this Lightning Component on to a record layout. Second, ``` <div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div> ``` will display the commission payout for the salesperson (defaults to $200).
+There are two pieces worth mentioning in this code block. First, ``` implements="flexipage:availableForAllPageTypes" ```, allows us to place this Lightning Component on to a record layout. Second, ``` <div style="text-align: center;">Commission:<br/><br/><span id="commish">$200</span></div> ``` will display the commission payout for the salesperson (defaults to $200).
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.2.png)
 
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.2.png) 
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.png) <<<MOVE
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/7.png)<<<MOVE
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/7.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/8.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/9.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/10.png)
