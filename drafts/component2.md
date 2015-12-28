@@ -46,15 +46,39 @@ There are two pieces worth mentioning in this code block. First, ``` implements=
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.png) <<<MOVE
 
-Now, let's add this component to the Opportunity record layout. Navigate to any Opportunity, and click on the gear icon in the upper right corner. Then click on "Edit Page."
+Now, let's add this component to the Opportunity record layout. Navigate to any Opportunity, and click on the gear icon in the upper right hand corner. Then click "Edit Page."
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/7.png)
+
+Now we're inside the Lightning App Builder. From here we can drag Lightning Components on to our layout. On the left hand side, you will see a list of our available Lightning Components. Lightning Components developed in-house will be listed under "Custom", which is where you should see our "commissionCalc."
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/8.png)
+
+Add the Lightning Component to your layout by dragging it above the text "To stay on track and see Sales Path...", and click "Save."
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/9.png)
+
+Make sure to Activate the page...
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/10.png)
+
+...and check "Active" on the next screen to add the component to the correct page layout.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/11.png)
+
+Now if you refresh your Opportunity, you should see our Lightning Component added to the page.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/12.png)
+
+### 3. Create Component to Change Commission Output
+
+So we've created a Lightning Component, and added it to our layout, but it doesn't do anything except display a static commission amount. Let's create a slider that allows the salesperson to adjust the total price, which we'll use to update the total commission.
+
+First, create a new Lightning Component, and name it "commissionSlider."
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/13.png)
+
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/14.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/15.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/16.png)
