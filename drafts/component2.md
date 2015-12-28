@@ -78,10 +78,26 @@ So we've created a Lightning Component, and added it to our layout, but it doesn
 First, create a new Lightning Component, and name it "commissionSlider."
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/14.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/15.png)
+
+Add the following code to your new Lightning Component:
+
+```html
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <ltng:require scripts="/resource/[REPLACE]/jquery, /resource/[REPLACE]/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/[REPLACE]/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css" afterScriptsLoaded="{!c.afterScriptsLoaded}"/>	
+    <div style="margin: 40px;">
+    	<div style="width: 100%; margin-top: 10px; text-align: center">Price:</div>
+        <div id="price" style="width: 100%; margin-bottom: 20px; margin-top:10px; text-align: center">$10,000</div>
+        <div id="slider"></div>
+    </div>
+</aura:component>
+```
+
+The code pulls in an external Javascript library that allows us to create a slider input field. Then, the html renders the slider, and sets the default value to $10,000.
+
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/16.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/17.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/18.png)
+
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/19.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/20.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/21.png)
