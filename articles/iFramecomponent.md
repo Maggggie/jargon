@@ -22,7 +22,7 @@ Name the file, "lightningChatter"...
 </apex:page>
 ```
 
-![alt text](http://i.imgur.com/AwmAcGp.jpg)
+![alt text](http://i.imgur.com/Zvx6Utf.jpg)
 
 Next, navigate to https://[yourdomainroot].salesforce.com/apex/lightningChatter, and you should see your Chatter feed appear like so:
 
