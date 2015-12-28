@@ -41,7 +41,7 @@ Add the following code to your new Lightning Component:
 	<div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div>
 </aura:component>
 ```
-There are two pieces worth mentioning in this code block. First, ```html implements="flexipage:availableForAllPageTypes" ```, allows us to place this Lightning Component on to a record layout. Second, ```html <div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div> ``` will display the commission payout for the salesperson (defaults to $500).
+There are two pieces worth mentioning in this code block. First, ``` implements="flexipage:availableForAllPageTypes" ```, allows us to place this Lightning Component on to a record layout. Second, ``` <div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div> ``` will display the commission payout for the salesperson (defaults to $500).
 
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.png)
