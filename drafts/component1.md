@@ -6,7 +6,7 @@ To complete this tutorial, you'll need a developer/demo org to help you follow a
 
 ### 1. Create the Visualforce Page:
 
-Open up the developer console by clicking on the gear in the upper right hand corner of your homepage, and then clicking: "Developer Console". Once you have the developer console open, create a new visualforce page to hold our chatter feed.
+Open up the developer console by clicking on the gear in the upper right hand corner of your homepage, and then click: "Developer Console." Once you have the developer console open, create a new visualforce page to hold our chatter feed.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png)
 
