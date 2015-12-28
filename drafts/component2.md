@@ -83,7 +83,7 @@ Add the following code to your new Lightning Component:
 
 ```html
 <aura:component implements="flexipage:availableForAllPageTypes">
-    <ltng:require scripts="/resource/[REPLACE]/jquery, /resource/[REPLACE]/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/[REPLACE]/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css" afterScriptsLoaded="{!c.afterScriptsLoaded}"/>	
+    <ltng:require scripts="/resource/jquery, /resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css" afterScriptsLoaded="{!c.afterScriptsLoaded}"/>	
     <div style="margin: 40px;">
     	<div style="width: 100%; margin-top: 10px; text-align: center">Price:</div>
         <div id="price" style="width: 100%; margin-bottom: 20px; margin-top:10px; text-align: center">$10,000</div>
@@ -97,11 +97,11 @@ The code pulls in an external Javascript library that allows us to create a slid
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/16.png)
 
-
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/19.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/20.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/21.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/22.png)
+Now we need to upload the Javascript library (jQuery UI) to our static resources. 
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/19.2.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/20.2.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/21.2.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/22.2.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/23.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/24.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/25.png)
