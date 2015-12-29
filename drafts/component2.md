@@ -83,7 +83,7 @@ Add the following code to your new Lightning Component:
 
 ```html
 <aura:component implements="flexipage:availableForAllPageTypes">
-    <ltng:require scripts="/resource/jquery, /resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css" afterScriptsLoaded="{!c.afterScriptsLoaded}"/>	
+    <ltng:require scripts="/resource/jquery, /resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css"/>	
     <div style="margin: 40px;">
     	<div style="width: 100%; margin-top: 10px; text-align: center">Price:</div>
         <div id="price" style="width: 100%; margin-bottom: 20px; margin-top:10px; text-align: center">$10,000</div>
@@ -97,20 +97,94 @@ The code pulls in an external Javascript library that allows us to create a slid
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/16.png)
 
-Now we need to upload the Javascript library (jQuery UI) to our static resources. 
+Next, we need to upload the Javascript library (jQuery UI) to our static resources. Go to setup, and search for "Static Resources", then click "New."
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/19.2.png)
+
+[Download this file](https://s3-us-west-2.amazonaws.com/salesforcejeff/jquery-ui-1.11.4.custom.zip), and save it as a static resource named "jqueryui." Make sure the cache control is set to "Public."
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/20.2.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/21.2.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/22.2.png)
+
+Now the structure of the component (the HTML) is complete, but we need to add some Javascript to bring the slider to life. First, add ```afterScriptsLoaded="{!c.afterScriptsLoaded}"``` to line 2, as shown in the image below. This piece of code will fire off the Javascript, after the external libraries have loaded.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/23.png)
+
+In Lightning, Javascript code lives seperate from our "Component" file, in a "Controller" file. If you try to add Javascript directly to the Component file, an error will appear, and the file won't save. So let's open up our Controller file by clicking "Controller" in the right side bar of the Developer Console. You should see the file below:
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/24.png)
+
+Next, add the following code to the file:
+
+```javascript
+({
+	afterScriptsLoaded : function(component, event, helper) {
+		$(function() {
+            $( "#slider" ).slider({
+                value: 50,
+                slide: function( event, ui ) {
+                    $('#price').text("$" + Math.round(20000 * (ui.value/100)))
+                    var evt = $A.get("e.c:commissionSliderEvt");
+       				evt.setParams({
+        				"message": Math.round(20000 * (ui.value/100))
+       				});
+       				evt.fire();
+                }
+            });
+  		});
+	}
+})
+```
+
+This code attaches to the slider, and fires an event when the slider value is changed. We will listen for this event, and update our commission accordingly.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/25.png)
+
+Now we're ready to add the slider component to our Opportunity record page layout, and it should appear like so:
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/26.png)
+
+### 4. Create a New Event
+
+Our final step is to create a Lightning event that will "glue" our slider to our commission component. This piece of code allows us to send a message from the slider component, to the commission component, telling it how much the price input has changed. From there, we update the total commission.
+
+First, we need to create the Lightning Event (File > New > Lightning Event).
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/27.png)
+
+Name the event, "commissionSliderEvt", and save the file.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/28.png)
+
+You should now see the file below:
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/29.png)
+
+Add the following code to the file:
+
+```html
+<aura:event type="APPLICATION">
+    <!-- add aura:attribute tags to define event shape.
+      One sample attribute here -->
+    <aura:attribute name="message" type="Integer"/>
+    <aura:attribute name="param1" type="String" default="parameter 1"/>
+
+</aura:event>
+```
+
+This code acts as the middle man between the two components. We use the "message" aura:attribute to hold the new value of the Opportunity price.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/30.png)
+
+Finally, we need to add some code to the Commission component, that updates the commission total when it recieves a new event. Navigate back to the "commissionCalc" component, and add the following code:
+
+```html
+<aura:registerEvent name="commissionSliderEvt" type="c:commissionSliderEvt"/>
+<aura:handler event="c:commissionSliderEvt" action="{!c.handleEvent}"/>
+```
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/31.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/32.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png)
