@@ -184,7 +184,27 @@ Finally, we need to add some code to the Commission component, that updates the 
 <aura:handler event="c:commissionSliderEvt" action="{!c.handleEvent}"/>
 ```
 
+Here, we're telling the commission component to start listening for our "commissionSliderEvt". Then when it receieves this event, it runs an action called, "handleEvent", which we will create next. (I've also updated the default commission to $200, so that it accurately defaults to a 5% commission)
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png)
+
+Now let's open up the controller for this component...
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/31.png)
+
+...and add the following code:
+
+```javascript
+({
+  handleEvent : function(component, event, helper) {
+        $(function(){
+            $('#commish').text('$'+event.getParams().message*.05)
+        })
+  }
+})
+```
+
+This is the code block that is called when our component receives an event from "comissionSliderEvt". It takes the price that was passed from the slider, and multiplies it by 5% to get the salesperson's commission.
+
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/32.png)
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png)
+[comment]: <> (![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png))
