@@ -43,9 +43,6 @@ There are two pieces worth mentioning in this code block. First, ``` implements=
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.2.png)
 
-
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.png) <<<MOVE
-
 Now, let's add this component to the Opportunity record layout. Navigate to any Opportunity, and click on the gear icon in the upper right hand corner. Then click "Edit Page."
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/7.png)
