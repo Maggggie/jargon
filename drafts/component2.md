@@ -207,4 +207,7 @@ Now let's open up the controller for this component...
 This is the code block that is called when our component receives an event from "comissionSliderEvt". It takes the price that was passed from the slider, and multiplies it by 5% to get the salesperson's commission.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/32.png)
-[comment]: <> (![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/33.png))
+
+Now when you return to your Opportunity, you should see the commission total update when you move the slider.
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/commishSlider.gif)
