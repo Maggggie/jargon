@@ -16,6 +16,8 @@ Name the file, "lightningChatter"...
 
 ... and add the following code to page:
 
+*1.1 lightningChatter.vfp*
+
 ```html
 <apex:page showHeader="false" sidebar="false">
     <chatter:newsfeed />
@@ -35,6 +37,8 @@ Now we're ready to create our new Lightning Component. Name your new component "
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png)
 
 Add an iFrame to the Lightning Component, that references the Visualforce Page we created:
+
+*2.1 lightningChatter.cmp*
 
 ```html
 <aura:component>
@@ -78,6 +82,8 @@ Now that we're in the Community Builder, let's add our Chatter component to the 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/14.png)
 
 Let's return to the Developer Console, and add these style attributes to our iFrame:
+
+*4.1 lightningChatter.cmp*
 
 ```html
 <iframe src="https://gs0.salesforce.com/apex/lightningChatter" width="100%" height="1000px;" frameBorder="0"/>
