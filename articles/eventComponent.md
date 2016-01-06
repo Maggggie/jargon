@@ -43,9 +43,6 @@ There are two pieces worth mentioning in this code block. First, ``` implements=
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.2.png)
 
-
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/6.2.png) <<<MOVE
-
 Now, let's add this component to the Opportunity record layout. Navigate to any Opportunity, and click on the gear icon in the upper right hand corner. Then click "Edit Page."
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/7.png)
@@ -125,11 +122,6 @@ Next, add the following code to the file:
                 value: 50,
                 slide: function( event, ui ) {
                     $('#price').text("$" + Math.round(20000 * (ui.value/100)))
-                    var evt = $A.get("e.c:commissionSliderEvt");
-       				evt.setParams({
-        				"message": Math.round(20000 * (ui.value/100))
-       				});
-       				evt.fire();
                 }
             });
   		});
@@ -137,9 +129,9 @@ Next, add the following code to the file:
 })
 ```
 
-This code attaches to the slider, and fires an event when the slider value is changed. We will listen for this event, and update our commission accordingly.
+This code attaches to the slider, and updates the price accordingly.
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/25.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/25.1.png)
 
 Now we're ready to add the slider component to our Opportunity record page layout, and it should appear like so:
 
@@ -168,16 +160,41 @@ Add the following code to the file:
     <!-- add aura:attribute tags to define event shape.
       One sample attribute here -->
     <aura:attribute name="message" type="Integer"/>
-    <aura:attribute name="param1" type="String" default="parameter 1"/>
-
 </aura:event>
 ```
 
 This code acts as the middle man between the two components. We use the "message" aura:attribute to hold the new value of the Opportunity price.
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/30.png)
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/30.1.png)
 
-Finally, we need to add some code to the Commission component, that updates the commission total when it recieves a new event. Navigate back to the "commissionCalc" component, and add the following code:
+### 5. Fire and Listen For Event
+
+Finally, we need to add some code to both of our components. In our slider component, we need to add some code, which will fire a new event, when the user moves the slider:
+
+```javascript
+({
+    afterScriptsLoaded : function(component, event, helper) {
+        $(function() {
+            $( "#slider" ).slider({
+                value: 50,
+                slide: function( event, ui ) {
+                    $('#price').text("$" + Math.round(20000 * (ui.value/100)))
+                    var evt = $A.get("e.c:commissionSliderEvt");
+                    evt.setParams({
+                        "message": Math.round(20000 * (ui.value/100))
+                    });
+                    evt.fire();
+                }
+            });
+        });
+    }
+})
+```
+
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/25.png)
+
+Last, we need to add some code to the Commission component, that updates the commission total when it recieves a new event. Navigate back to the "commissionCalc" component, and add the following code:
 
 ```html
 <aura:registerEvent name="commissionSliderEvt" type="c:commissionSliderEvt"/>
