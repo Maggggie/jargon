@@ -34,7 +34,7 @@ This component will simply display the total commission the salesperson will ear
 
 Add the following code to your new Lightning Component:
 
-*2.1*
+*2.1 commissionCalc.cmp*
 
 ```html
 <aura:component implements="flexipage:availableForAllPageTypes">
@@ -80,7 +80,7 @@ First, create a new Lightning Component, and name it "commissionSlider."
 
 Add the following code to your new Lightning Component:
 
-*3.1*
+*3.1 commissionSlider.cmp*
 
 ```html
 <aura:component implements="flexipage:availableForAllPageTypes">
@@ -118,7 +118,7 @@ In Lightning, Javascript code lives seperate from our "Component" file, in a "Co
 
 Next, add the following code to the file:
 
-*3.2*
+*3.2 commissionSliderController.js*
 
 ```javascript
 ({
@@ -161,7 +161,7 @@ You should now see the file below:
 
 Add the following code to the file:
 
-*4.1*
+*4.1 commissionSliderEvt.evt*
 
 ```html
 <aura:event type="APPLICATION">
@@ -177,9 +177,9 @@ This code acts as the middle man between the two components. We use the "message
 
 ### 5. Fire and Listen For Event
 
-Finally, we need to add some code to both of our components. In our slider component, we need to add some code, which will fire a new event, when the user moves the slider:
+Finally, we need to add some code to both of our components, to allow them to interact with our new event. In our slider component, we need to add some code, which will fire a new event when the user moves the slider:
 
-*5.1*
+*5.1 commissionSliderController.js*
 
 ```javascript
 ({
@@ -206,7 +206,7 @@ Finally, we need to add some code to both of our components. In our slider compo
 
 Last, we need to add some code to the Commission component, that updates the commission total when it recieves a new event. Navigate back to the "commissionCalc" component, and add the following code:
 
-*5.2*
+*5.2 commissionCalc.cmp*
 
 ```html
 <aura:registerEvent name="commissionSliderEvt" type="c:commissionSliderEvt"/>
@@ -223,7 +223,7 @@ Now let's open up the controller for this component...
 
 ...and add the following code:
 
-*5.3*
+*5.3 commissionCalcController.js*
 
 ```javascript
 ({
