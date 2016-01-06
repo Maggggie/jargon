@@ -34,9 +34,10 @@ This component will simply display the total commission the salesperson will ear
 
 Add the following code to your new Lightning Component:
 
+*2.1*
 ```html
 <aura:component implements="flexipage:availableForAllPageTypes">
-	<div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div>
+    <div style="text-align: center;">Commission:<br/><br/><span id="commish">$500</span></div>
 </aura:component>
 ```
 There are two pieces worth mentioning in this code block. First, ``` implements="flexipage:availableForAllPageTypes" ```, allows us to place this Lightning Component on to a record layout. Second, ``` <div style="text-align: center;">Commission:<br/><br/><span id="commish">$200</span></div> ``` will display the commission payout for the salesperson (defaults to $200).
@@ -78,11 +79,12 @@ First, create a new Lightning Component, and name it "commissionSlider."
 
 Add the following code to your new Lightning Component:
 
+*3.1*
 ```html
 <aura:component implements="flexipage:availableForAllPageTypes">
-    <ltng:require scripts="/resource/jquery, /resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css"/>	
+    <ltng:require scripts="/resource/jquery, /resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.js" styles="/resource/jqueryui/jquery-ui-1.11.4.custom/jquery-ui.min.css"/>   
     <div style="margin: 40px;">
-    	<div style="width: 100%; margin-top: 10px; text-align: center">Price:</div>
+        <div style="width: 100%; margin-top: 10px; text-align: center">Price:</div>
         <div id="price" style="width: 100%; margin-bottom: 20px; margin-top:10px; text-align: center">$10,000</div>
         <div id="slider"></div>
     </div>
@@ -114,18 +116,19 @@ In Lightning, Javascript code lives seperate from our "Component" file, in a "Co
 
 Next, add the following code to the file:
 
+*3.2*
 ```javascript
 ({
-	afterScriptsLoaded : function(component, event, helper) {
-		$(function() {
+    afterScriptsLoaded : function(component, event, helper) {
+        $(function() {
             $( "#slider" ).slider({
                 value: 50,
                 slide: function( event, ui ) {
                     $('#price').text("$" + Math.round(20000 * (ui.value/100)))
                 }
             });
-  		});
-	}
+        });
+    }
 })
 ```
 
@@ -155,6 +158,7 @@ You should now see the file below:
 
 Add the following code to the file:
 
+*4.1*
 ```html
 <aura:event type="APPLICATION">
     <!-- add aura:attribute tags to define event shape.
@@ -171,6 +175,7 @@ This code acts as the middle man between the two components. We use the "message
 
 Finally, we need to add some code to both of our components. In our slider component, we need to add some code, which will fire a new event, when the user moves the slider:
 
+*5.1*
 ```javascript
 ({
     afterScriptsLoaded : function(component, event, helper) {
@@ -196,6 +201,7 @@ Finally, we need to add some code to both of our components. In our slider compo
 
 Last, we need to add some code to the Commission component, that updates the commission total when it recieves a new event. Navigate back to the "commissionCalc" component, and add the following code:
 
+*5.2*
 ```html
 <aura:registerEvent name="commissionSliderEvt" type="c:commissionSliderEvt"/>
 <aura:handler event="c:commissionSliderEvt" action="{!c.handleEvent}"/>
@@ -211,6 +217,7 @@ Now let's open up the controller for this component...
 
 ...and add the following code:
 
+*5.3*
 ```javascript
 ({
   handleEvent : function(component, event, helper) {
