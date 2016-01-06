@@ -41,14 +41,12 @@ Add an iFrame to the Lightning Component, that references the Visualforce Page w
 *2.1 lightningChatter.cmp*
 
 ```html
-<aura:component>
+<aura:component implements="forceCommunity:availableForAllPageTypes">
     <iframe src="https://[yourdomainroot].salesforce.com/apex/lightningChatter"/>
 </aura:component>
 ```
 
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/5.png)
-
-We also need to add the 'implements="forceCommunity:availableForAllPageTypes"' property to the Lightning Component, to allow it to be added to our community:
+We've also added, ```implements="forceCommunity:availableForAllPageTypes"``` as an attribute, to allow the Lightning Component to be added to our community:
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/6.png)
 
