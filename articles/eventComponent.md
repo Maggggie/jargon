@@ -16,7 +16,7 @@ Next, add a unique domain name, and click "Check Availability." If the domain is
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/2.png)
 
-Now we need to log in using our new domain name. Navigate to http://[yourdomainname].salesforce.com, and log in using your org credentials.
+Now we need to log in using our new domain name. Navigate to http://[yourdomainname].my.salesforce.com, and log in using your org credentials.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/3.png)
 
