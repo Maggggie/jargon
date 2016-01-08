@@ -1,5 +1,7 @@
 # Building an Event Driven Lightning Component
 
+NOTE: This tutorial works best in Chrome or Safari.
+
 In this post, we will create an event driven commission calculator, and add it to our Opportunity layout.
 
 To complete this tutorial, you'll need a developer/demo org to help you follow along.
