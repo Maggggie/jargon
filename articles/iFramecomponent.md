@@ -1,10 +1,10 @@
 # Exposing Visualforce in a Lightning Component
 
-NOTE: This tutorial works best in Chrome or Safari.
-
 In this post, we will cover duplicating an existing Visualforce Page as a Lightning Component. Specifically, we will create a Chatter feed component to use in a Napili template.
 
 To complete this tutorial, you'll need a developer/demo org to help you follow along.
+
+NOTE: This tutorial works best in Chrome or Safari.
 
 ### 1. Create a Domain:
 
