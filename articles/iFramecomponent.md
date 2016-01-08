@@ -4,9 +4,21 @@ In this post, we will cover duplicating an existing Visualforce Page as a Lightn
 
 To complete this tutorial, you'll need a developer/demo org to help you follow along.
 
-### 1. Create the Visualforce Page:
+### 1. Create a Domain:
 
-Open up the developer console by clicking on the gear in the upper right hand corner of your homepage, and then clicking: "Developer Console". Once you have the developer console open, create a new visualforce page to hold our chatter feed.
+Salesforce requires that an app must have it's own domain, to be able to use Lightning Components. So let's start by adding a domain to our org.
+
+First, go to setup, and search for "Domain" in the search bar. Then select "My Domain".
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/1.png)
+
+Then add a unique domain name, and click "Check Availability." If the domain is available, click "Register Domain", otherwise try a different domain name.
+
+![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/2.png)
+
+### 2. Create the Visualforce Page:
+
+Open up the developer console by clicking on the gear in the upper right hand corner of your homepage, and then clicking: "Developer Console". Once you have the developer console open, create a new visualforce page to hold our chatter feed (File>New>Visualforce Page).
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/1.png)
 
@@ -16,7 +28,7 @@ Name the file, "lightningChatter"...
 
 ... and add the following code to page:
 
-*1.1 lightningChatter.vfp*
+*2.1 lightningChatter.vfp*
 
 ```html
 <apex:page showHeader="false" sidebar="false">
@@ -30,15 +42,15 @@ Next, navigate to https://[yourdomainroot].salesforce.com/apex/lightningChatter,
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/3.2.png)
 
-### 2. Create the Lightning Component:
+### 3. Create the Lightning Component:
 
-Now we're ready to create our new Lightning Component. Name your new component "lightningChatter" as well:
+Now we're ready to create our new Lightning Component (File>New>Lightning Component). Name your new component "lightningChatter" as well:
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/4.png)
 
 Add an iFrame to the Lightning Component, that references the Visualforce Page we created:
 
-*2.1 lightningChatter.cmp*
+*3.1 lightningChatter.cmp*
 
 ```html
 <aura:component implements="forceCommunity:availableForAllPageTypes">
@@ -50,7 +62,7 @@ We've also added, ```implements="forceCommunity:availableForAllPageTypes"``` as 
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/6.png)
 
-### 3. Spin-Up A New Community:
+### 4. Spin-Up A New Community:
 
 Next, we need to create a new community to hold our new Lightning Component. Go to Setup, and search for "Communities" in the search bar. Select "All Communities":
 
@@ -65,7 +77,7 @@ Click "New Community" to create our new community...
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/9.png)
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component1/10.png)
 
-### 4. Add the Component to the Community:
+### 5. Add the Component to the Community:
 
 Open the Global Header, and select "Go to Community Builder".
 
@@ -81,7 +93,7 @@ Now that we're in the Community Builder, let's add our Chatter component to the 
 
 Let's return to the Developer Console, and add these style attributes to our iFrame:
 
-*4.1 lightningChatter.cmp*
+*5.1 lightningChatter.cmp*
 
 ```html
 <iframe src="https://gs0.salesforce.com/apex/lightningChatter" width="100%" height="1000px;" frameBorder="0"/>

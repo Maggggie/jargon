@@ -4,23 +4,13 @@ In this post, we will create an event driven commission calculator, and add it t
 
 To complete this tutorial, you'll need a developer/demo org to help you follow along.
 
-### 1. Create a Domain:
+### 1. Log In to Your New Domain:
 
-Salesforce requires that an app must have it's own domain, to be able to add a Lightning Component to a record layout. So let's start by adding a domain to our org.
-
-First, go to setup, and search for "Domain" in the search bar. Then select "My Domain".
-
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/1.png)
-
-Next, add a unique domain name, and click "Check Availability." If the domain is available, click "Register Domain", otherwise try a different domain name.
-
-![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/2.png)
-
-Now we need to log in using our new domain name. Navigate to http://[yourdomainname].my.salesforce.com, and log in using your org credentials.
+First, log-in to the new domain you created in Part 1 of this tutorial. Navigate to http://[yourdomainname].my.salesforce.com, and log in using your org credentials.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/3.png)
 
-Last, go back to "My Domains" in setup, and click "Deploy to Users" to activate your new domain.
+Next, navigate to "My Domains" in setup, and click "Deploy to Users" to activate your new domain.
 
 ![alt text](https://s3-us-west-2.amazonaws.com/salesforcejeff/component2/4.png)
 
